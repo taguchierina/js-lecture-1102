@@ -1,7 +1,10 @@
-// ボタンがクリックされたときのイベントを追加
+// 1. ボタンがクリックされたときのイベントを追加
 
 
-// GitHub APIにリクエストを送り、レスポンスを受け取る
+
+// 1. ここまで
+
+// 2. GitHub APIにリクエストを送り、レスポンスを受け取る
 function getUserInfo(userId) {
   // XMLHttpRequest(XHR)オブジェクトの初期化
 
@@ -12,7 +15,7 @@ function getUserInfo(userId) {
     // エラーハンドリング：①HTTPステータスコードが「200 OK」以外の場合
 
 
-    // 正常時の処理
+    // 正常時の処理：3. レスポンス（JSONテキスト）を加工し、DOMに追加する
 
   });
 
@@ -22,16 +25,18 @@ function getUserInfo(userId) {
 
 }
 
-// 正常時の処理
+// 2. ここまで
+
+// 3. レスポンス（JSONテキスト）を加工し、DOMに追加する
 function showUserInfo(event) {
   // コンソールへの出力
 
 
-  // レスポンステキスト（JSON）を連想配列（オブジェクト）に変換する
+  // レスポンス（JSONテキスト）を、JSON.parseメソッドで連想配列（オブジェクト）に変換する
 
 
   // HTMLテキストを組み立てる
-  // テンプレートリテラルを使用して、変数を埋め込む
+  // テンプレートリテラルを使用して、変数を埋め込む（注意：バッククォートを使う！）
 
 
   // 追加先の<div id="result">を検索
@@ -40,3 +45,5 @@ function showUserInfo(event) {
   // DOMを<div id="result">の下に追加
 
 }
+
+// 3. ここまで
